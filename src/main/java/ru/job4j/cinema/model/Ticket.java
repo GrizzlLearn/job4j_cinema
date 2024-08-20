@@ -27,6 +27,8 @@ public class Ticket {
 	private int rowNumber;
 	private int placeNumber;
 
+	public Ticket() { }
+
 	public Ticket(
 			int id,
 			int sessionId,
