@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--  Зависимости Bootstrap-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+	<script th:src="@{/js/code.jquery.com_jquery-3.7.0.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<title>Сеансы</title>
+</head>
+<body>
+<div class="container-fluid p-0">
+	<header th:insert="~{blocks/header :: header}"></header>
+	<div class="container">
+		<ul class="list-group">
+			<header th:insert="~{blocks/header :: header}"></header>
+			<li class="list-group-item" th:each="session : ${sessions}">
+				<h5>Фильм: <span th:text="${session.movieTitle}">Название фильма</span></h5>
+				<p>Дата и время: <span th:text="${session.dateTime}">Дата и время</span></p>
+				<p>Зал: <span th:text="${session.hallName}">Название зала</span></p>
+			</li>
+		</ul>
+	</div>
+	<footer th:insert="~{blocks/footer :: footer}"></footer>
+</div>
+</body>
+</html>
