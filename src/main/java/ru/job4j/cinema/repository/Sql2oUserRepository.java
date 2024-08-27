@@ -5,7 +5,6 @@ import org.slf4j.Logger;
 import org.springframework.stereotype.Repository;
 import org.sql2o.Sql2o;
 import ru.job4j.cinema.model.User;
-
 import java.util.Optional;
 
 /**
@@ -48,7 +47,7 @@ public class Sql2oUserRepository implements UserRepository {
 			String sql = "SELECT * FROM users WHERE email = :email AND password = :password";
 			var query = connection.createQuery(sql)
 					.addParameter("email", email)
-					.addParameter("passwoed", password);
+					.addParameter("password", password);
 			return Optional.ofNullable(query.executeAndFetchFirst(User.class));
 		}
 	}
