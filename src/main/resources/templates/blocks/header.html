@@ -5,8 +5,8 @@
 			<div class="collapse navbar-collapse">
 				<div class="navbar-nav me-auto">
 					<a class="nav-item nav-link active" href="/">Главная</a>
-					<a class="nav-item nav-link active" th:href="@{/schedules}">Расписание</a>
-					<a class="nav-item nav-link active" th:href="@{/cinematheque}">Кинотека</a>
+					<a class="nav-item nav-link active" th:href="@{/schedules/list}">Расписание</a>
+					<a class="nav-item nav-link active" th:href="@{/cinematheque/list}">Кинотека</a>
 					<a class="nav-item nav-link active" th:href="@{/tickets/buy}">Купить билет</a>
 				</div>
 				<div class="d-flex" th:if="${user.name == 'Guest'}">

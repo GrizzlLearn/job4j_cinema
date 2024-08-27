@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!--  Зависимости Bootstrap-->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link th:href = "@{/css/bootstrap.min.css}" rel="stylesheet">
+	<script th:src="@{/js/code.jquery.com_jquery-3.7.0.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+	<title>Фильм</title>
+</head>
+<body>
+<div class="container-fluid p-0">
+	<header th:insert="~{blocks/header :: header}"></header>
+	<div class="container">
+		<div class="row">
+			<!--
+			<div class="col-md-4">
+				<img th:src="@{${film.posterUrl}}" class="img-fluid" alt="Poster">
+			</div>
+			-->
+			<div class="col-md-8">
+				<h1 th:text="${film.name}">Movie Title</h1>
+				<p><strong>Год выпуска:</strong> <span th:text="${film.year}">Year</span></p>
+				<p><strong>Жанр:</strong> <span th:text="${film.genreId}">Genre</span></p>
+				<p><strong>Описание:</strong></p>
+				<p th:text="${film.description}">Movie description here.</p>
+				<a th:href="@{/sessions/filmId=${film.id}}" class="btn btn-primary">Смотреть сеансы</a>
+			</div>
+		</div>
+		<div class="mt-5">
+			<a th:href="@{/films/list}" class="btn btn-secondary">Назад к списку фильмов</a>
+		</div>
+	</div>
+	<footer th:insert="~{blocks/footer :: footer}"></footer>
+</div>
+</body>
+</html>

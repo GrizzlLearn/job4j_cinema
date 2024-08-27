@@ -10,19 +10,19 @@
 	<title>Кинотека</title>
 </head>
 <body>
-<div class="container-fluid p-0">
-	<header th:insert="~{blocks/header :: header}"></header>
-	<div class="row" th:each="movie : ${movies}">
-	<div class="col-md-4">
-		<div class="card mb-4">
-			<div class="card-body">
-				<h5 class="card-title" th:text="${movie.title}">Название фильма</h5>
-				<p class="card-text" th:text="${movie.description}">Описание фильма</p>
+	<div class="container-fluid p-0">
+		<header th:insert="~{blocks/header :: header}"></header>
+		<div class="row" th:each="movie : ${movies}">
+		<div class="col-md-4">
+			<div class="card mb-4">
+				<div class="card-body">
+					<h5 class="card-title" th:text="${movie.title}">Название фильма</h5>
+					<p class="card-text" th:text="${movie.description}">Описание фильма</p>
+				</div>
 			</div>
 		</div>
+		<footer th:insert="~{blocks/footer :: footer}"></footer>
+		</div>
 	</div>
-	<footer th:insert="~{blocks/footer :: footer}"></footer>
-</div>
-</div>
 </body>
 </html>

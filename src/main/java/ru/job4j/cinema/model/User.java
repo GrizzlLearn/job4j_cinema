@@ -15,22 +15,22 @@ public class User {
 
 	public static final Map<String, String> COLUMN_MAPPING = Map.of(
 			"id", "id",
+			"full_name", "name",
 			"email", "email",
-			"name", "name",
 			"password", "password"
 	);
 
 	private int id;
-	private String email;
 	private String name;
+	private String email;
 	private String password;
 
 	public User() { }
 
-	public User(int id, String email, String name, String password) {
+	public User(int id, String name, String email, String password) {
 		this.id = id;
-		this.email = email;
 		this.name = name;
+		this.email = email;
 		this.password = password;
 	}
 
