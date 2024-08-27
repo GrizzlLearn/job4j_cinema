@@ -48,7 +48,7 @@ public class UserController {
 		if (userOptional.isEmpty()) {
 			return "users/login";
 		}
-		HttpSession session = request.getSession();;
+		HttpSession session = request.getSession();
 		session.setAttribute("user", userOptional.get());
 		return "users/login";
 	}

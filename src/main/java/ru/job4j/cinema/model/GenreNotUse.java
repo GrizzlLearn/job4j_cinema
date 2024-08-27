@@ -10,7 +10,7 @@ import java.util.Objects;
  * @date 19.08.2024 23:52
  */
 @Data
-public class Genre_ {
+public class GenreNotUse {
 
 	public static final Map<String, String> COLUMN_MAPPING = Map.of(
 			"id", "id",
@@ -20,18 +20,22 @@ public class Genre_ {
 	private int id;
 	private String name;
 
-	public Genre_() { }
+	public GenreNotUse() { }
 
-	public Genre_(int id, String name) {
+	public GenreNotUse(int id, String name) {
 		this.id = id;
 		this.name = name;
 	}
 
 	@Override
 	public boolean equals(Object o) {
-		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
-		Genre_ genre = (Genre_) o;
+		if (this == o) {
+			return true;
+		}
+		if (o == null || getClass() != o.getClass()) {
+			return false;
+		}
+		GenreNotUse genre = (GenreNotUse) o;
 		return id == genre.id;
 	}
 
